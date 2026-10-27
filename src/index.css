@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark mode default - Quantum Obsidian Data Science Theme */
+  --color-bg: #060913;
+  --color-bg-secondary: #0b1120;
+  --color-card: rgba(13, 20, 36, 0.75);
+  --color-card-hover: rgba(20, 31, 56, 0.90);
+  --color-border: rgba(56, 189, 248, 0.14);
+  --color-border-strong: rgba(56, 189, 248, 0.30);
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-primary: #38bdf8;
+  --color-primary-hover: #0ea5e9;
+  --color-accent: #6366f1;
+  --color-teal: #14b8a6;
+  --color-purple: #a855f7;
+  --glass-bg: rgba(11, 18, 33, 0.82);
+  --glass-border: rgba(56, 189, 248, 0.16);
+}
+
+.light {
+  /* Light mode - Academic Technical Alabaster */
+  --color-bg: #f8fafc;
+  --color-bg-secondary: #ffffff;
+  --color-card: rgba(255, 255, 255, 0.92);
+  --color-card-hover: rgba(241, 245, 249, 0.98);
+  --color-border: rgba(15, 23, 42, 0.10);
+  --color-border-strong: rgba(14, 165, 233, 0.32);
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-primary: #0284c7;
+  --color-primary-hover: #0369a1;
+  --color-accent: #4f46e5;
+  --color-teal: #0d9488;
+  --color-purple: #9333ea;
+  --glass-bg: rgba(255, 255, 255, 0.90);
+  --glass-border: rgba(14, 165, 233, 0.15);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-card {
+  background: var(--color-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.28);
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 25px -3px rgba(56, 189, 248, 0.28);
+}
+
+.glow-accent {
+  box-shadow: 0 0 25px -3px rgba(99, 102, 241, 0.28);
+}
